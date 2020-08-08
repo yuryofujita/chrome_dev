@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+	<meta charset = "utf-8">
+	<title>JavaScript</title>
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+</head>
+<body style="background-color: beige;">
+	<h1 id="title">テストタイトル</h1>
+	<p>
+		名前：<input type="text" name="namae" id="namae" size="40" maxlength="20">
+	</p>
+	<input type="button" value="名前の文字数をチェック" onclick="funcLen()">
+	<script>
+		var funcLen = function () {
+			var len = 0;
+			len = $("#namae").val().length
+			if (len == 0) {
+				alert("0文字です")
+			} else if (len >= 5) {
+				alert($("#namae").val() + "は5文字以上です")
+			} else {
+				alert($("#namae").val() + "は5文字未満です")
+			}
+		}
+	</script>
+</body>
+</html>
+
